@@ -1,13 +1,13 @@
 #ifndef SECRETS_H
 #define SECRETS_H
 
-#define WIFI_SSID "Pranav's S25 FE"
-#define WIFI_PASSWORD "zcod7197"
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
 
 // Your BiolinkDB Credentials
-#define API_KEY "AIzaSyAqLuW5mnRPokZoGue4H3aC1KFJt1hP2cQ"
-#define DATABASE_URL "https://biolinkdb-default-rtdb.firebaseio.com/" 
-#define USER_EMAIL "esp32@biolinkdb.example"
-#define USER_PASSWORD "admin12" 
+#define API_KEY ""
+#define DATABASE_URL "" 
+#define USER_EMAIL ""
+#define USER_PASSWORD "" 
 
 #endif
