@@ -1,0 +1,6 @@
+# build output
+desktop/target/
+
+# local config with API key and database password
+desktop/biolink.toml
+biolink.toml
