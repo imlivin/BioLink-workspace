@@ -1,0 +1,19 @@
+# Files to exclude from the EAS Build upload (used when building without Git).
+node_modules/
+.expo/
+dist/
+web-build/
+
+# Logs
+*.log
+expo-err.log
+expo-out.log
+npm-debug.*
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+
+# Stray non-project files
+npx
+set
