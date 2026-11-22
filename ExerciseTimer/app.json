@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Exercise Timer",
+    "slug": "exercise-timer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.shive.exercisetimer"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "79256c0e-2f42-493d-ad38-e892a1d492ba"
+      }
+    }
+  }
+}
