@@ -1,0 +1,33 @@
+{
+    "rules": {
+      ".read": "auth != null",
+      
+      "test_imu": {
+        ".write": "auth != null && auth.token.email === 'esp32@biolinkdb.example'"
+      },
+        
+      "current": {
+        ".write": "auth != null",
+        ".validate": "newData.hasChildren(['exercise','timestamp'])",
+        "exercise": { ".validate": "newData.isString()" },
+        "timestamp": { ".validate": "newData.isNumber()" },
+        "$other": { ".validate": false }
+      },
+
+      "control": {
+        ".write": "auth != null && auth.token.email === 'app@biolinkdb.example'",
+        ".validate": "newData.hasChildren(['active', 'session_id', 'exercise', 'updated_at'])",
+        "active": { ".validate": "newData.isBoolean()" },
+        "sessionid": { ".validate": "newData.isString() && newData.val().matches(/^[A-Za-z0-9-]{6,40}$/)" },
+        "exercise": { ".validate": "newData.isString() && newData.val().length <= 40" },
+        "updated_at": { ".validate": "newData.isNumber() && newData.val() === now" },
+        "$other": { ".validate": false }
+      },
+
+      "device_status": {
+        ".write": "auth != null && auth.token.email === 'esp32@biolinkdb.example'",
+        ".validate": "newData.hasChildren(['last_seen'])",
+        "last_seen": { ".validate": "newData.val() === now" }
+      }
+    }
+  }

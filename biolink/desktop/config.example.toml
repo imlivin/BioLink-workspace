@@ -1,0 +1,17 @@
+# Copy to biolink.toml (next to biolink.exe, or in the folder you run it from).
+# biolink.toml is git-ignored: never commit it.
+
+database_url = "https://biolinkdb-default-rtdb.firebaseio.com"
+api_key = "AIza...your-web-api-key..."
+
+# Local PostgreSQL. The "biolink" database and its tables are created automatically.
+postgres_url = "postgresql://postgres:YOUR_PASSWORD@localhost:5432/biolink"
+
+# Firebase nodes (defaults shown)
+imu_path = "test_imu"          # ESP32: overwritten once per second with samples 0..47
+app_state_path = "current"     # phone: {"exercise": "...", "timestamp": <epoch ms>} on start / stop
+
+# Sensor scale of the raw values (MPU-6050 defaults: +-2 g, +-250 deg/s)
+accel_lsb_per_g = 16384
+gyro_lsb_per_dps = 131
+sample_interval_ms = 20

@@ -1,0 +1,17 @@
+[package]
+name = "biolink"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+chrono = "0.4.45"
+crossbeam-channel = "0.5.17"
+# OpenGL (glow) renderer instead of the default wgpu one: wgpu on Windows flashes black on some GPUs/drivers.
+eframe = { version = "0.37.0", default-features = false, features = ["accesskit", "clipboard", "default_fonts", "glow", "links", "system_fonts"] }
+egui_plot = "0.38.0"
+postgres = { version = "0.19.14", features = ["with-chrono-0_4"] }
+reqwest = { version = "0.13.5", default-features = false, features = ["blocking", "json", "native-tls", "query", "form"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+toml = "1.2.1"
